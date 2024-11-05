@@ -14,8 +14,12 @@ Host mysever
     User u0_a198
     IdentityFile ~/.ssh/id_rsa
     Port  8022
- 此时可用 ssh myserver 来登录远程主机
 
+ssh mysever 
+scp filename mysever:<path>
+scp -r dirname mysever:<path> 
+scp mysever:<path-file> <path>
+scp -r mysever:<path> <path>
 
 
 
