@@ -1,0 +1,25 @@
+一 用ssh 登陆远程主机
+远程主机必须运行 sshd服务 systemctl start sshd
+ssh [-p <端口号> ] user@ipaddress / hostname
+   
+生成ssh 密钥对
+    ssh-keygen -t rsa -C "密钥说明"
+
+复制密钥对到远程主机 可免密登录
+    ssh-copy-id [-p <端口号>] user@ipaddress 
+
+编辑配置文件 ~/.ssh/config 
+Host mysever
+    HostName 192.168.0.108
+    User u0_a198
+    IdentityFile ~/.ssh/id_rsa
+    Port  8022
+ 此时可用 ssh myserver 来登录远程主机
+
+
+
+
+
+
+    
+
